@@ -24,61 +24,70 @@ var typed = new Typed('.typedText', {
     });
 
 
+document.getElementById("downloadButton").addEventListener("click", function() {
+    var link = document.createElement('a');
+  // Set the href attribute to the file you want to download
+  link.setAttribute('href', 'https://drive.google.com/file/d/1ul_ZZmWzsCaYF4r7OHahL9Sc8J5z4u2s/view?usp=sharing');
+  // Set the download attribute to specify the filename
+  link.setAttribute('download', 'Seaf_GamelCV.pdf');
+  
+  // This is necessary for cross-origin requests
+  link.setAttribute('rel', 'noopener');
+  
+  // Simulate a click on the anchor element
+  link.click();
+  });
+
+//     // ? Scroll Reveal
+// const sr = ScrollReveal({
+//     origin: 'top',
+//     distance: '80px',
+//     duration: 2000,
+//     reset: true
+// });
+
+// sr.reveal(".featured-name", {delay: 100});
+// sr.reveal(".text-info", {delay: 200});
+// sr.reveal(".text-btn", {delay: 200});
+// sr.reveal(".social-icons", {delay: 200});
+// sr.reveal(".featured-image", {delay: 320});
+
+// sr.reveal(".project-box", {interval: 100});
+// sr.reveal(".top-header", {interval: 100});  
+
+// const srLeft= ScrollReveal({
+//     origin: 'left',
+//     distance: '80px',
+//     duration: 2000,
+//     reset: true
+// });
+// srLeft.reveal(".about-info", {delay: 100});
+// srLeft.reveal(".contact-info", {delay: 100});
+
+// const srRight= ScrollReveal({
+//     origin: 'left',
+//     distance: '80px',
+//     duration: 2000,
+//     reset: true
+// });
+// srRight.reveal(".skill", {delay: 100});
+// srRight.reveal(".skill-box", {delay: 100});
 
 
+// // active link
+// const navLink = document.querySelectorAll('.section[id]');
 
-
-    
-    // ? Scroll Reveal
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-});
-
-sr.reveal(".featured-name", {delay: 100});
-sr.reveal(".text-info", {delay: 200});
-sr.reveal(".text-btn", {delay: 200});
-sr.reveal(".social-icons", {delay: 200});
-sr.reveal(".featured-image", {delay: 320});
-
-sr.reveal(".project-box", {interval: 100});
-sr.reveal(".top-header", {interval: 100});  
-
-const srLeft= ScrollReveal({
-    origin: 'left',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-});
-srLeft.reveal(".about-info", {delay: 100});
-srLeft.reveal(".contact-info", {delay: 100});
-
-const srRight= ScrollReveal({
-    origin: 'left',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-});
-srRight.reveal(".skill", {delay: 100});
-srRight.reveal(".skill-box", {delay: 100});
-
-
-// active link
-const navLink = document.querySelectorAll('.section[id]');
-
-function scrollActive() {
-    const scrollY = window.pageYOffset;
-    navLink.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id');
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
-        } else {
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
-        }
-    });
-}
-window.addEventListener('scroll', scrollActive);
+// function scrollActive() {
+//     const scrollY = window.pageYOffset;
+//     navLink.forEach(current => {
+//         const sectionHeight = current.offsetHeight;
+//         const sectionTop = current.offsetTop - 50;
+//         sectionId = current.getAttribute('id');
+//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//             document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
+//         } else {
+//             document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
+//         }
+//     });
+// }
+// window.addEventListener('scroll', scrollActive);
