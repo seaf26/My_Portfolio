@@ -23,18 +23,12 @@ var typed = new Typed('.typedText', {
     loop: true,
     });
 
-
+// ? Dowmload CV
 document.getElementById("downloadButton").addEventListener("click", function() {
     var link = document.createElement('a');
-  // Set the href attribute to the file you want to download
   link.setAttribute('href', 'https://drive.google.com/file/d/1ul_ZZmWzsCaYF4r7OHahL9Sc8J5z4u2s/view?usp=sharing');
-  // Set the download attribute to specify the filename
   link.setAttribute('download', 'Seaf_GamelCV.pdf');
-  
-  // This is necessary for cross-origin requests
   link.setAttribute('rel', 'noopener');
-  
-  // Simulate a click on the anchor element
   link.click();
   });
 
